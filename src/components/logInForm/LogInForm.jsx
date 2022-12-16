@@ -3,7 +3,7 @@ import { useFormik, Formik } from 'formik';
 import { logIn } from 'redux/auth/operations';
 import { object, string } from 'yup';
 import { FormStyled as Form } from './LogInForm.styled';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from '../navLink/NavLink';
 import {TextField, Button} from '@mui/material';
 
 
@@ -74,7 +74,7 @@ export const LogInForm = () => {
                     style={{                    
                         marginBottom: '10px',                        
                     }}>Log In</Button>
-                <NavLink to="/register">Haven’t Your account yet?</NavLink>                
+                <NavLink to="/register" fontSize='12'>Haven’t Your account yet?</NavLink>
             </Form>            
         </Formik>
     )

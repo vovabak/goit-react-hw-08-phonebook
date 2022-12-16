@@ -12,7 +12,7 @@ export const AppBar = () => {
     return (
         <Header>                
             <Nav>
-                <NavLink to='/' fontSize='24' >Phonebook</NavLink>
+                <NavLink to='/' fontSize='22' >Phonebook</NavLink>
                 {isLoggedIn? <UserMenu /> : <AuthNav />}
             </Nav>
         </Header>

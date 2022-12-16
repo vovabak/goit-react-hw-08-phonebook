@@ -114,9 +114,7 @@ export const RegisterForm = () => {
                 <Button                    
                     type="submit"
                     variant="contained"
-                    style={{                    
-                        marginBottom: '10px',                        
-                    }}>Sign Up</Button>                           
+                    >Sign Up</Button>                           
             </Form>            
         </Formik>
     )
