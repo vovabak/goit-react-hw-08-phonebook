@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
-// import {selectContacts} from '../../redux'
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import PropTypes from 'prop-types';
 import { Item, Text, Button } from '../listItem/ListItem.styled';
 import { useState } from 'react';
@@ -9,13 +8,12 @@ import { useState } from 'react';
 
 export const ListItem = ({ contact }) => {
     const dispatch = useDispatch();
-    const [isDeliting, setIsDeliting] = useState(false)    
-    // const { isLoading } = useSelector(selectContacts);
-    const { name, phone, id } = contact;    
+    const [isDeliting, setIsDeliting] = useState(false)
+    const { name, number, id } = contact;    
         
 
     return <Item>        
-                <Text><b>{name}:</b> <br /> {phone}</Text>
+                <Text><b>{name}:</b> <br /> {number}</Text>
                 <Button type="button" disabled={isDeliting} onClick={() => {
                     setIsDeliting(true);           
                     dispatch(deleteContact(id));        
@@ -28,7 +26,7 @@ export const ListItem = ({ contact }) => {
 ListItem.propTypes = {
     contact: PropTypes.shape({        
         name: PropTypes.string.isRequired,
-        phone: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
         id: PropTypes.string.isRequired,
     }).isRequired,
 }

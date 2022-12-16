@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectContacts } from '../../redux';
-import {addContact} from '../../redux/operations'
+import { selectContacts } from '../../redux/contacts/selectors';
+import {addContact} from '../../redux/contacts/operations'
 import { Formik } from 'formik';
 import { object, string } from 'yup';
 import { Label, Button, FormStyled as Form, Input } from './ContactForm.styled';

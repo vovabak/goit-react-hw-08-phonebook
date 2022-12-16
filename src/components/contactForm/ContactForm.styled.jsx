@@ -5,8 +5,8 @@ export const FormStyled = styled(Form)`
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 3px;
+    // border: 1px solid black;
+    // border-radius: 3px;
     `
 export const Input = styled(Field)`
     margin-top: 5px;

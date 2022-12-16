@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectContacts, selectVisibleContacts } from '../../redux';
+import { selectContacts, selectVisibleContacts } from '../../redux/contacts/selectors';
 import { ListItem } from "components/listItem";
 import { List, NotifyText } from './ContactList.styled';
 import { useEffect } from "react";
-import { fetchContacts } from "redux/operations";
+import { fetchContacts } from "redux/contacts/operations";
 
 export const ContactList = () => {    
     const dispatch = useDispatch();
     const visibleContacts = useSelector(selectVisibleContacts);    
-    const {items, isLoading, error} = useSelector(selectContacts);    
+    const { items, isLoading, error } = useSelector(selectContacts);
     
     useEffect(() => {        
         dispatch(fetchContacts());
-    }, [dispatch])
+    }, [dispatch])   
     
 
     return <>
@@ -29,11 +29,12 @@ export const ContactList = () => {
         
         {visibleContacts.length > 0 && !error &&
             <List>          
-                    {visibleContacts.map(contact =>
-                        <ListItem
-                            key={contact.id}
-                            contact={contact}                        
-                        />)}
+                {visibleContacts.slice(0).reverse().map(contact =>
+                    <ListItem
+                        key={contact.id}
+                        contact={contact}
+                    />
+                )}
             </List>}
         </>
 }
