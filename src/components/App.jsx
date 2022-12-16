@@ -10,7 +10,7 @@ import { Register } from "pages/Register";
 import { LogIn } from "pages/Login";
 import { PrivateRoute } from "components/PrivateRoute";
 import { RestrictedRoute } from "components/RestrictedRoute";
-const Contacts = lazy(() => import("pages/Contacts"));
+const Contacts = lazy(() => import("pages/contacts/Contacts"));
 
 
 export const App = () => {
@@ -21,21 +21,24 @@ export const App = () => {
                 dispatch(refresh())                
         }, [dispatch]);
 
-        return !isRefresching && (
-                <Routes>
-                        <Route path="/" exact element={<SharedLayout />} >
-                                <Route index element={<Home />} />
-                                <Route path="/contacts"
-                                        element={
+        return !isRefresching && (                
+                <Routes>                        
+                        <Route path="/" exact element={<SharedLayout />} >                                
+                                <Route index element={<Home />} />                                
+                                <Route
+                                        path="/contacts"
+                                        element={                                                
                                                 <PrivateRoute redirectTo="/login" component={<Contacts />} />
-                                        }
-                                />                
-                                <Route path="/register"
+                                        }                                        
+                                />                                
+                                <Route
+                                        path="/register"
                                         element={
                                                 <RestrictedRoute redirectTo="/contacts" component={<Register />} />
                                         }
                                 />
-                                <Route path="/login"
+                                <Route
+                                        path="/login"                                        
                                         element={
                                                 <RestrictedRoute redirectTo="/contacts" component={<LogIn />} />
                                         }

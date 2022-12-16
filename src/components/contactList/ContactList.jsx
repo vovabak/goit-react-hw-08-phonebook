@@ -27,7 +27,7 @@ export const ContactList = () => {
         {items.length === 0 && !isLoading && !error &&
             < NotifyText > There's no contacts in your Phonebook</NotifyText>}
         
-        {visibleContacts.length > 0 && !error &&
+        {visibleContacts.length > 0 && !error && !isLoading &&
             <List>          
                 {visibleContacts.slice(0).reverse().map(contact =>
                     <ListItem

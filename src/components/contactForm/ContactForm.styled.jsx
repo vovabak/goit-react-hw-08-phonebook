@@ -3,10 +3,7 @@ import { Form, Field } from 'formik';
 
 export const FormStyled = styled(Form)`
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    // border: 1px solid black;
-    // border-radius: 3px;
+    flex-direction: column;    
     `
 export const Input = styled(Field)`
     margin-top: 5px;
