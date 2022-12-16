@@ -27,7 +27,7 @@ export const RegisterForm = () => {
         
         const { firstname, lastname, email, password } = values;
                 
-        dispatch(register({
+        dispatch(register({            
             name: `${firstname} ${lastname}`,
             email,
             password,
@@ -53,10 +53,10 @@ export const RegisterForm = () => {
                     }}
                     fullWidth
                     id="firstname"
-                    label="firstname"
+                    label="Firstname"
                     variant="outlined"
                     type="text"                        
-                    name="Firstname"
+                    name="firstname"
                     required
                     value={formik.values.firstname}
                     onChange={formik.handleChange}
