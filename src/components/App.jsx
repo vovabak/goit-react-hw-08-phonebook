@@ -10,7 +10,7 @@ import { Register } from "pages/Register";
 import { LogIn } from "pages/Login";
 import { PrivateRoute } from "components/PrivateRoute";
 import { RestrictedRoute } from "components/RestrictedRoute";
-const Contacts = lazy(() => import("pages/contacts/Contacts"));
+const Contacts = lazy(() => import("pages/Contacts"));
 
 
 export const App = () => {

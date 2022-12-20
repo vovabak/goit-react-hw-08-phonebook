@@ -3,7 +3,6 @@ import { useFormik, Formik } from 'formik';
 import { logIn } from 'redux/auth/operations';
 import { object, string } from 'yup';
 import { FormStyled as Form } from './LogInForm.styled';
-import { NavLink } from '../navLink/NavLink';
 import {TextField, Button} from '@mui/material';
 
 
@@ -34,10 +33,9 @@ export const LogInForm = () => {
     return (
         <Formik>
             <Form
-                onSubmit={formik.handleSubmit}
-            >
+                onSubmit={formik.handleSubmit}>
                 <TextField
-                    style={{
+                    sx={{
                         marginBottom: '10px',
                     }}
                     fullWidth
@@ -73,8 +71,9 @@ export const LogInForm = () => {
                     variant="contained"
                     style={{                    
                         marginBottom: '10px',                        
-                    }}>Log In</Button>
-                <NavLink to="/register" fontSize='12'>Haven’t Your account yet?</NavLink>
+                    }}>
+                    Log In
+                </Button>                
             </Form>            
         </Formik>
     )

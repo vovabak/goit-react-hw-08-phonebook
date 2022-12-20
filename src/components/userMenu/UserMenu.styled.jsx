@@ -8,9 +8,10 @@ export const Wrapper = styled.div`
     `
 
 export const UserInfo = styled.p`
-    margin: 5px;
+    margin: 0;
     font-size: 16px;
     font-weight: bold;
+    line-height: 1;
     color: #1976d2;
     `
 
