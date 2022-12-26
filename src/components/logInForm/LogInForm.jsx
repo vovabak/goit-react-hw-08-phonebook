@@ -24,11 +24,11 @@ export const LogInForm = () => {
         resetForm();        
     }
 
-    const formik = useFormik({
-    initialValues,
-    validationSchema: signupSchema,
-    onSubmit: handleSubmit,
-  })    
+    const formik = useFormik({        
+        initialValues,        
+        validationSchema: signupSchema,    
+        onSubmit: handleSubmit,    
+    })    
 
     return (
         <Formik>
@@ -51,7 +51,7 @@ export const LogInForm = () => {
                     helperText={formik.touched.email && formik.errors.email}                    
                 />
                 <TextField
-                    style={{
+                    sx={{
                         marginBottom: '10px',
                     }}
                     fullWidth
@@ -69,7 +69,7 @@ export const LogInForm = () => {
                 <Button                    
                     type="submit"
                     variant="contained"
-                    style={{                    
+                    sx={{                    
                         marginBottom: '10px',                        
                     }}>
                     Log In

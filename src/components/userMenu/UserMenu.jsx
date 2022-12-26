@@ -21,8 +21,7 @@ export const UserMenu = () => {
                 sx={{                    
                     m: 0,
                     mb: 0.2,
-                    fontSize: 16,
-                    fontWeight: 'bold',
+                    fontSize: 16,                    
                     lineHeight: 1,
                     color: '#1976d2',
                 }}>                
@@ -34,8 +33,7 @@ export const UserMenu = () => {
                 sx={{
                     fontSize: 16,            
                     fontWeight: 'bold',
-                    lineHeight: 1,
-                    textTransform: 'lowercase',
+                    lineHeight: 1,                    
                     color: '#1976d2',
                     '&:hover': {
                         color: '#FFF',
@@ -46,7 +44,11 @@ export const UserMenu = () => {
                         bgcolor: '#1976d2',
                         outline: 0,
                     }, 
-                }}>Log Out</Button>
+                }}>L<span
+                    style={{
+                        textTransform: 'lowercase',                        
+                    }}>og Out</span>
+            </Button>
         </Box>
     )
 }
