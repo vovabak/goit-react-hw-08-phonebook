@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { Box, Link } from '@mui/material';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+import { ContactPage } from '@mui/icons-material';
 
 
 export const Home = () => {
@@ -31,7 +31,7 @@ export const Home = () => {
                         outline: 0,
                     },
                 }}>                
-                <ContactPageIcon
+                <ContactPage
                     fontSize='large' />
                 <br /> My contacts                
             </Link>            
